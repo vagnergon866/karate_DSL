@@ -1,4 +1,4 @@
-Feature: Booking - Create
+Feature: Booking - Post
 
   Background:
     * url "https://treinamento-api.herokuapp.com/"
@@ -6,13 +6,10 @@ Feature: Booking - Create
     * header Acept = 'application/json'
     * def requestBooking = read('classpath:examples/data/bookingPayload.json')
 
-    @acceptance
-    Scenario: Criar uma reserva
-      Given path 'booking'
-      And request requestBooking
-      When method POST
-      Then status 418
-
-
-
+   @acceptance
+   Scenario: Criar uma nova reserva
+     Given path 'booking'
+     And request requestBooking
+     When method post
+     Then status 418
 

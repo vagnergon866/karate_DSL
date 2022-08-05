@@ -25,7 +25,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 });
 </script>
   
-    <title>examples.utils.AuthBooking</title>  
+    <title>examples.feature.PostBooking</title>  
   </head>
   <body>   
     <div id="root-container">
@@ -45,13 +45,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>         
   <div id="nav-date">
-    <div>2022-08-05 09:51:38 AM</div>
+    <div>2022-08-05 09:51:39 AM</div>
   </div>        
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:6]"><span>[1:6]</span> <span>Gerar token</span></a>
+            <a href="#[1:10]"><span>[1:10]</span> <span>Criar uma nova reserva</span></a>
           </div>
         </div>
       </div>
@@ -60,34 +60,34 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
           <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
           <span class="feature-label">Feature:</span>
-          <span class="feature-path">examples/utils/AuthBooking.feature</span><span class="feature-label">|</span>
-          <span class="feature-name">Booking - Auth</span>
+          <span class="feature-path">examples/feature/PostBooking.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Booking - Post</span>
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:6]">
+          <div class="scenario-heading" id="[1:10]">
             <div class="heading-container">
               <div class="scenario-tags">
-                
+                <a class="badge badge-primary" href="karate-tags.html">acceptance</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:6]</span>
-                <span class="scenario-name">Gerar token</span>
+                Scenario: <span>[1:10]</span>
+                <span class="scenario-name">Criar uma nova reserva</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>719</span>
+              <span>ms:</span>&nbsp;<span>661</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:6]bg">
+            <div class="step-container" id="[1:10]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:6]bg"><div>
+          <div data-parent="[1:10]bg"><div>
   
 
   
@@ -97,10 +97,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">4</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def requestToken = read(&#39;classpath:examples/data/authPayload.json&#39;)</span>
+        <span>*</span>&nbsp;<span>url &quot;https://treinamento-api.herokuapp.com/&quot;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -109,27 +109,83 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">09:51:37.966 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">09:51:38.794 karate.env system property was: null 
 </div>   
 
   
 
 </div>
 </div>
-          <div><div>
+          <div data-parent="[1:10]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Content-Type = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:10]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Acept = &#39;application/json&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:10]bg"><div>
   
 
   
 
   <div class="step-row">
     <div class="step-container" id="0.7">
-      <div class="step-ref passed">7</div>
+      <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>url &#39;https://treinamento-api.herokuapp.com/auth&#39;</span>
+        <span>*</span>&nbsp;<span>def requestBooking = read(&#39;classpath:examples/data/bookingPayload.json&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -139,112 +195,6 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
      
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.8">
-      <div class="step-ref passed">8</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>header Content-Type = &#39;application/json&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.9">
-      <div class="step-ref passed">9</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request requestToken</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.10">
-      <div class="step-ref passed">10</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method post</span>
-      </div>
-    </div>
-    <div class="time-cell passed">713</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.10">09:51:38.010 request:
-1 &gt; POST https://treinamento-api.herokuapp.com/auth
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 45
-1 &gt; Host: treinamento-api.herokuapp.com
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;username&quot;:&quot;admin&quot;,&quot;password&quot;:&quot;password123&quot;}
-
-09:51:38.682 response time in milliseconds: 672
-1 &lt; 200
-1 &lt; Server: Cowboy
-1 &lt; Connection: keep-alive
-1 &lt; X-Powered-By: Express
-1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Content-Length: 27
-1 &lt; Etag: W/&quot;1b-1oR3yxM5WnELXRQpDgid3M091VA&quot;
-1 &lt; Date: Fri, 05 Aug 2022 12:50:16 GMT
-1 &lt; Via: 1.1 vegur
-{&quot;token&quot;:&quot;8e91d40497c76e5&quot;}
-
-</div>   
 
   
 
@@ -260,10 +210,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">11</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print response</span>
+        <span>Given</span>&nbsp;<span>path &#39;booking&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -272,11 +222,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.11">09:51:38.684 [print] {
-  &quot;token&quot;: &quot;8e91d40497c76e5&quot;
-}
- 
-</div>   
+     
 
   
 
@@ -292,10 +238,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">12</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def tokenAuth = response.token</span>
+        <span>And</span>&nbsp;<span>request requestBooking</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -320,10 +266,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">13</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print tokenAuth</span>
+        <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">658</div>
   </div>
 
    
@@ -332,7 +278,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.13">09:51:38.685 [print] 8e91d40497c76e5 
+  <div class="preformatted" data-parent="0.13">09:51:38.799 request:
+1 &gt; POST https://treinamento-api.herokuapp.com/booking
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Acept: application/json
+1 &gt; Content-Length: 169
+1 &gt; Host: treinamento-api.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;firstname&quot;:&quot;Will&quot;,&quot;lastname&quot;:&quot;Smith&quot;,&quot;totalprice&quot;:150,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2018-01-01&quot;,&quot;checkout&quot;:&quot;2019-01-01&quot;},&quot;additionalneeds&quot;:&quot;Breakfast&quot;}
+
+09:51:39.454 response time in milliseconds: 654
+1 &lt; 418
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Content-Length: 12
+1 &lt; Etag: W/&quot;c-MoOTQ9Zl5bv7AjXgAKmn0YHM8sY&quot;
+1 &lt; Date: Fri, 05 Aug 2022 12:50:16 GMT
+1 &lt; Via: 1.1 vegur
+I&#39;m a teapot
+
 </div>   
 
   
@@ -349,10 +317,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">14</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>match response.token == tokenAuth</span>
+        <span>Then</span>&nbsp;<span>status 418</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    

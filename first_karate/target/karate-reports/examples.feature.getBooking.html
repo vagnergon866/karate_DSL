@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.identify("c3703b02-1775-4365-86e0-ae51699b028f",{name:"vagner.goncalves"});
+    posthog.capture("report_feature",{karate_version:"1.2.0",karate_meta:null});
+  }
+});
+</script>
+  
+    <title>examples.feature.GetBooking</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">9</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2022-08-05 11:37:28 AM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:8]"><span>[1:8]</span> <span>Garantir o contrato do retorno da lista de reservas</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[2:24]"><span>[2:24]</span> <span>Listar IDs das reservas</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[3:30]"><span>[3:30]</span> <span>Listar uma reserva específica</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[4.1:46]"><span>[4.1:46]</span> <span>Listar IDs de reservas utilizando o filtro firstname</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[5.1:59]"><span>[5.1:59]</span> <span>Listar IDs de reservas utilizando o filtro lastname</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[6.1:72]"><span>[6.1:72]</span> <span>Listar IDs de reservas utilizando o filtro checkin</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[7.1:85]"><span>[7.1:85]</span> <span>Listar IDs de reservas utilizando o filtro checkout</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[8.1:98]"><span>[8.1:98]</span> <span>Listar IDs de reservas utilizando o filtro checkin and checkout</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[9.1:111]"><span>[9.1:111]</span> <span>Listar IDs de reservas utilizando o filtro name, checkin and checkout date</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">examples/feature/GetBooking.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Booking - Get</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:8]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">Contract</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:8]</span>
+                <span class="scenario-name">Garantir o contrato do retorno da lista de reservas</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>1292</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:8]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:8]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &quot;https://treinamento-api.herokuapp.com/&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">11:37:21.975 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;booking&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1262</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.10">11:37:22.239 request:
+1 &gt; GET https://treinamento-api.herokuapp.com/booking
+1 &gt; Host: treinamento-api.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:37:23.232 response time in milliseconds: 985
+1 &lt; 200
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 179
+1 &lt; Etag: W/&quot;b3-gTLzj+7FduPZ/98sjDaQ1KzCErg&quot;
+1 &lt; Date: Fri, 05 Aug 2022 14:36:00 GMT
+1 &lt; Via: 1.1 vegur
+[{&quot;bookingid&quot;:3},{&quot;bookingid&quot;:6},{&quot;bookingid&quot;:5},{&quot;bookingid&quot;:10},{&quot;bookingid&quot;:7},{&quot;bookingid&quot;:2},{&quot;bookingid&quot;:11},{&quot;bookingid&quot;:9},{&quot;bookingid&quot;:1},{&quot;bookingid&quot;:8},{&quot;bookingid&quot;:4}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>match each response == { bookingid: &quot;#number&quot; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">28</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:24]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">acceptance</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:24]</span>
+                <span class="scenario-name">Listar IDs das reservas</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>651</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:24]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:24]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &quot;https://treinamento-api.herokuapp.com/&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">11:37:23.312 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;booking&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">651</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.26">11:37:23.316 request:
+1 &gt; GET https://treinamento-api.herokuapp.com/booking
+1 &gt; Host: treinamento-api.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:37:23.963 response time in milliseconds: 647
+1 &lt; 200
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 179
+1 &lt; Etag: W/&quot;b3-gTLzj+7FduPZ/98sjDaQ1KzCErg&quot;
+1 &lt; Date: Fri, 05 Aug 2022 14:36:01 GMT
+1 &lt; Via: 1.1 vegur
+[{&quot;bookingid&quot;:3},{&quot;bookingid&quot;:6},{&quot;bookingid&quot;:5},{&quot;bookingid&quot;:10},{&quot;bookingid&quot;:7},{&quot;bookingid&quot;:2},{&quot;bookingid&quot;:11},{&quot;bookingid&quot;:9},{&quot;bookingid&quot;:1},{&quot;bookingid&quot;:8},{&quot;bookingid&quot;:4}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:30]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">acceptance</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:30]</span>
+                <span class="scenario-name">Listar uma reserva específica</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>680</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:30]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &quot;https://treinamento-api.herokuapp.com/&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">11:37:23.972 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;booking/1&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">679</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.32">11:37:23.975 request:
+1 &gt; GET https://treinamento-api.herokuapp.com/booking/1
+1 &gt; Host: treinamento-api.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:37:24.651 response time in milliseconds: 675
+1 &lt; 418
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Content-Length: 12
+1 &lt; Etag: W/&quot;c-MoOTQ9Zl5bv7AjXgAKmn0YHM8sY&quot;
+1 &lt; Date: Fri, 05 Aug 2022 14:36:02 GMT
+1 &lt; Via: 1.1 vegur
+I&#39;m a teapot
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.33">
+      <div class="step-ref passed">33</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 418</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4.1:46]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">acceptance</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4.1:46]</span>
+                <span class="scenario-name">Listar IDs de reservas utilizando o filtro firstname</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>707</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4.1:46]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4.1:46]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &quot;https://treinamento-api.herokuapp.com/&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:37:24.665 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.37">
+      <div class="step-ref passed">37</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def varParams = {firstname: Will}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;booking&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.39">
+      <div class="step-ref passed">39</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>params varParams</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.40">
+      <div class="step-ref passed">40</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">703</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.40">11:37:24.673 request:
+1 &gt; GET https://treinamento-api.herokuapp.com/booking?firstname=Will
+1 &gt; Host: treinamento-api.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:37:25.370 response time in milliseconds: 697
+1 &lt; 200
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 18
+1 &lt; Etag: W/&quot;12-syWDNKoCjO2b3ztf5dcxujay3bs&quot;
+1 &lt; Date: Fri, 05 Aug 2022 14:36:02 GMT
+1 &lt; Via: 1.1 vegur
+[{&quot;bookingid&quot;:11}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.41">
+      <div class="step-ref passed">41</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.42">
+      <div class="step-ref passed">42</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.42">11:37:25.373 [print] [
+  {
+    &quot;bookingid&quot;: 11
+  }
+]
+ 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5.1:59]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">acceptance</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5.1:59]</span>
+                <span class="scenario-name">Listar IDs de reservas utilizando o filtro lastname</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>689</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5.1:59]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5.1:59]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &quot;https://treinamento-api.herokuapp.com/&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:37:25.382 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def varParams = {lastname:&#39;Smith&#39;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.51">
+      <div class="step-ref passed">51</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;booking&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>params varParams</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">688</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.53">11:37:25.385 request:
+1 &gt; GET https://treinamento-api.herokuapp.com/booking?lastname=Smith
+1 &gt; Host: treinamento-api.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:37:26.071 response time in milliseconds: 685
+1 &lt; 200
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 34
+1 &lt; Etag: W/&quot;22-q4Tchh05Ig44V9mj7ChZ5GtXtpA&quot;
+1 &lt; Date: Fri, 05 Aug 2022 14:36:03 GMT
+1 &lt; Via: 1.1 vegur
+[{&quot;bookingid&quot;:11},{&quot;bookingid&quot;:4}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.54">
+      <div class="step-ref passed">54</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.55">
+      <div class="step-ref passed">55</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.55">11:37:26.073 [print] [
+  {
+    &quot;bookingid&quot;: 11
+  },
+  {
+    &quot;bookingid&quot;: 4
+  }
+]
+ 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[6.1:72]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">acceptance</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[6.1:72]</span>
+                <span class="scenario-name">Listar IDs de reservas utilizando o filtro checkin</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>643</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[6.1:72]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[6.1:72]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &quot;https://treinamento-api.herokuapp.com/&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:37:26.080 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.63">
+      <div class="step-ref passed">63</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def varParams = {checkin:&#39;2018-01-01&#39;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.64">
+      <div class="step-ref passed">64</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;booking&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.65">
+      <div class="step-ref passed">65</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>params varParams</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.66">
+      <div class="step-ref passed">66</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">641</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.66">11:37:26.083 request:
+1 &gt; GET https://treinamento-api.herokuapp.com/booking?checkin=2018-01-01
+1 &gt; Host: treinamento-api.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:37:26.721 response time in milliseconds: 637
+1 &lt; 200
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 146
+1 &lt; Etag: W/&quot;92-2UV674BAV9IUHI0DnrfLA4x0DOU&quot;
+1 &lt; Date: Fri, 05 Aug 2022 14:36:04 GMT
+1 &lt; Via: 1.1 vegur
+[{&quot;bookingid&quot;:3},{&quot;bookingid&quot;:6},{&quot;bookingid&quot;:5},{&quot;bookingid&quot;:10},{&quot;bookingid&quot;:2},{&quot;bookingid&quot;:9},{&quot;bookingid&quot;:1},{&quot;bookingid&quot;:8},{&quot;bookingid&quot;:4}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.67">
+      <div class="step-ref passed">67</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.68">
+      <div class="step-ref passed">68</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.68">11:37:26.724 [print] [
+  {
+    &quot;bookingid&quot;: 3
+  },
+  {
+    &quot;bookingid&quot;: 6
+  },
+  {
+    &quot;bookingid&quot;: 5
+  },
+  {
+    &quot;bookingid&quot;: 10
+  },
+  {
+    &quot;bookingid&quot;: 2
+  },
+  {
+    &quot;bookingid&quot;: 9
+  },
+  {
+    &quot;bookingid&quot;: 1
+  },
+  {
+    &quot;bookingid&quot;: 8
+  },
+  {
+    &quot;bookingid&quot;: 4
+  }
+]
+ 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[7.1:85]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">acceptance</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[7.1:85]</span>
+                <span class="scenario-name">Listar IDs de reservas utilizando o filtro checkout</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>702</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[7.1:85]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[7.1:85]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &quot;https://treinamento-api.herokuapp.com/&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:37:26.733 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.76">
+      <div class="step-ref passed">76</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def varParams = {checkout:&#39;2019-01-01&#39;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;booking&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.78">
+      <div class="step-ref passed">78</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>params varParams</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.79">
+      <div class="step-ref passed">79</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">700</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.79">11:37:26.736 request:
+1 &gt; GET https://treinamento-api.herokuapp.com/booking?checkout=2019-01-01
+1 &gt; Host: treinamento-api.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:37:27.433 response time in milliseconds: 695
+1 &lt; 200
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 18
+1 &lt; Etag: W/&quot;12-syWDNKoCjO2b3ztf5dcxujay3bs&quot;
+1 &lt; Date: Fri, 05 Aug 2022 14:36:04 GMT
+1 &lt; Via: 1.1 vegur
+[{&quot;bookingid&quot;:11}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.80">
+      <div class="step-ref passed">80</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.81">
+      <div class="step-ref passed">81</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.81">11:37:27.437 [print] [
+  {
+    &quot;bookingid&quot;: 11
+  }
+]
+ 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[8.1:98]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">acceptance</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[8.1:98]</span>
+                <span class="scenario-name">Listar IDs de reservas utilizando o filtro checkin and checkout</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>656</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[8.1:98]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[8.1:98]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &quot;https://treinamento-api.herokuapp.com/&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:37:27.448 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.89">
+      <div class="step-ref passed">89</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def varParams = {checkin:&#39;2018-01-01&#39;}, {checkout:&#39;2019-01-01&#39;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.90">
+      <div class="step-ref passed">90</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;booking&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.91">
+      <div class="step-ref passed">91</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>params varParams</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.92">
+      <div class="step-ref passed">92</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">654</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.92">11:37:27.452 request:
+1 &gt; GET https://treinamento-api.herokuapp.com/booking?checkin=2018-01-01
+1 &gt; Host: treinamento-api.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:37:28.102 response time in milliseconds: 649
+1 &lt; 200
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 146
+1 &lt; Etag: W/&quot;92-2UV674BAV9IUHI0DnrfLA4x0DOU&quot;
+1 &lt; Date: Fri, 05 Aug 2022 14:36:05 GMT
+1 &lt; Via: 1.1 vegur
+[{&quot;bookingid&quot;:3},{&quot;bookingid&quot;:6},{&quot;bookingid&quot;:5},{&quot;bookingid&quot;:10},{&quot;bookingid&quot;:2},{&quot;bookingid&quot;:9},{&quot;bookingid&quot;:1},{&quot;bookingid&quot;:8},{&quot;bookingid&quot;:4}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.93">
+      <div class="step-ref passed">93</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.94">
+      <div class="step-ref passed">94</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.94">11:37:28.107 [print] [
+  {
+    &quot;bookingid&quot;: 3
+  },
+  {
+    &quot;bookingid&quot;: 6
+  },
+  {
+    &quot;bookingid&quot;: 5
+  },
+  {
+    &quot;bookingid&quot;: 10
+  },
+  {
+    &quot;bookingid&quot;: 2
+  },
+  {
+    &quot;bookingid&quot;: 9
+  },
+  {
+    &quot;bookingid&quot;: 1
+  },
+  {
+    &quot;bookingid&quot;: 8
+  },
+  {
+    &quot;bookingid&quot;: 4
+  }
+]
+ 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[9.1:111]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                <a class="badge badge-primary" href="karate-tags.html">acceptance</a>
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[9.1:111]</span>
+                <span class="scenario-name">Listar IDs de reservas utilizando o filtro name, checkin and checkout date</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>650</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[9.1:111]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[9.1:111]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &quot;https://treinamento-api.herokuapp.com/&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.4">11:37:28.120 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.102">
+      <div class="step-ref passed">102</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def varParams = {firstname: &#39;Will&#39;}, {checkin:&#39;2018-01-01&#39;}, {checkout:&#39;2019-01-01&#39;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.103">
+      <div class="step-ref passed">103</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;booking&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.104">
+      <div class="step-ref passed">104</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>params varParams</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.105">
+      <div class="step-ref passed">105</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">649</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.105">11:37:28.124 request:
+1 &gt; GET https://treinamento-api.herokuapp.com/booking?firstname=Will
+1 &gt; Host: treinamento-api.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.2)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+11:37:28.770 response time in milliseconds: 646
+1 &lt; 200
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 18
+1 &lt; Etag: W/&quot;12-syWDNKoCjO2b3ztf5dcxujay3bs&quot;
+1 &lt; Date: Fri, 05 Aug 2022 14:36:06 GMT
+1 &lt; Via: 1.1 vegur
+[{&quot;bookingid&quot;:11}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.106">
+      <div class="step-ref passed">106</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.107">
+      <div class="step-ref passed">107</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.107">11:37:28.771 [print] [
+  {
+    &quot;bookingid&quot;: 11
+  }
+]
+ 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

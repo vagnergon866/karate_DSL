@@ -10,8 +10,14 @@ class BookingRunner {
     }
 
     @Karate.Test
-    Karate createBookingTest() {
-        return Karate.run("utils/CreateBooking.feature").relativeTo(getClass());
+    Karate postBookingTest() {
+        return Karate.run("feature/PostBooking.feature").relativeTo(getClass());
     }
+
+    @Karate.Test
+    Karate getBookingTest() {
+        return Karate.run("feature/GetBooking.feature").relativeTo(getClass());
+    }
+
 
 }
