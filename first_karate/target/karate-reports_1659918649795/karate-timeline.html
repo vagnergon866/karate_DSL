@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[1:9]","start":1659918608943,"end":1659918611108,"title":"src\/test\/java\/examples\/feature\/GetBooking[1:9] 21:30:08.943-21:30:11.108 Garantir o contrato do retorno da lista de reservas"},{"id":2,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[2:16]","start":1659918611112,"end":1659918612553,"title":"src\/test\/java\/examples\/feature\/GetBooking[2:16] 21:30:11.112-21:30:12.553 Garantir o contrato do retorno de uma reserva especifica"},{"id":3,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[3:25]","start":1659918612559,"end":1659918613935,"title":"src\/test\/java\/examples\/feature\/GetBooking[3:25] 21:30:12.559-21:30:13.935 Listar IDs das reservas"},{"id":4,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[4:31]","start":1659918613946,"end":1659918615314,"title":"src\/test\/java\/examples\/feature\/GetBooking[4:31] 21:30:13.946-21:30:15.314 Listar uma reserva específica","className":"failed"},{"id":5,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[5.1:47]","start":1659918615326,"end":1659918616676,"title":"src\/test\/java\/examples\/feature\/GetBooking[5.1:47] 21:30:15.326-21:30:16.676 Listar IDs de reservas utilizando o filtro firstname"},{"id":6,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[6.1:60]","start":1659918616680,"end":1659918618054,"title":"src\/test\/java\/examples\/feature\/GetBooking[6.1:60] 21:30:16.680-21:30:18.054 Listar IDs de reservas utilizando o filtro lastname"},{"id":7,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[7.1:73]","start":1659918618062,"end":1659918619384,"title":"src\/test\/java\/examples\/feature\/GetBooking[7.1:73] 21:30:18.062-21:30:19.384 Listar IDs de reservas utilizando o filtro checkin"},{"id":8,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[8.1:86]","start":1659918619390,"end":1659918620726,"title":"src\/test\/java\/examples\/feature\/GetBooking[8.1:86] 21:30:19.390-21:30:20.726 Listar IDs de reservas utilizando o filtro checkout"},{"id":9,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[9.1:99]","start":1659918620734,"end":1659918622044,"title":"src\/test\/java\/examples\/feature\/GetBooking[9.1:99] 21:30:20.734-21:30:22.044 Listar IDs de reservas utilizando o filtro checkin and checkout"},{"id":10,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[10.1:112]","start":1659918622052,"end":1659918623406,"title":"src\/test\/java\/examples\/feature\/GetBooking[10.1:112] 21:30:22.052-21:30:23.406 Listar IDs de reservas utilizando o filtro name, checkin and checkout date"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

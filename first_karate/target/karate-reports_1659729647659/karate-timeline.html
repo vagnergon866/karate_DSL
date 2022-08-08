@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[4.1:46]","start":1659729621395,"end":1659729627942,"title":"src\/test\/java\/examples\/feature\/GetBooking[4.1:46] 17:00:21.395-17:00:27.942 Listar IDs de reservas utilizando o filtro firstname"},{"id":2,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[5.1:59]","start":1659729627950,"end":1659729628633,"title":"src\/test\/java\/examples\/feature\/GetBooking[5.1:59] 17:00:27.950-17:00:28.633 Listar IDs de reservas utilizando o filtro lastname"},{"id":3,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[6.1:72]","start":1659729628646,"end":1659729629345,"title":"src\/test\/java\/examples\/feature\/GetBooking[6.1:72] 17:00:28.646-17:00:29.345 Listar IDs de reservas utilizando o filtro checkin"},{"id":4,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[7.1:85]","start":1659729629356,"end":1659729630075,"title":"src\/test\/java\/examples\/feature\/GetBooking[7.1:85] 17:00:29.356-17:00:30.075 Listar IDs de reservas utilizando o filtro checkout"},{"id":5,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[8.1:98]","start":1659729630090,"end":1659729630773,"title":"src\/test\/java\/examples\/feature\/GetBooking[8.1:98] 17:00:30.090-17:00:30.773 Listar IDs de reservas utilizando o filtro checkin and checkout"},{"id":6,"group":1,"content":"src\/test\/java\/examples\/feature\/GetBooking[9.1:111]","start":1659729630783,"end":1659729631473,"title":"src\/test\/java\/examples\/feature\/GetBooking[9.1:111] 17:00:30.783-17:00:31.473 Listar IDs de reservas utilizando o filtro name, checkin and checkout date"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

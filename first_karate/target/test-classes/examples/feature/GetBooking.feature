@@ -2,7 +2,8 @@ Feature: Booking - Get
 
   Background:
     * url "https://treinamento-api.herokuapp.com/"
-
+    * call read('classpath:examples/utils/AuthBooking.feature')
+    * header Accept = 'application/json'
 
   @Contract
     Scenario: Garantir o contrato do retorno da lista de reservas
@@ -11,14 +12,14 @@ Feature: Booking - Get
       When status 200
       Then match each response == { bookingid: "#number" }
 
-      #verificar schema de retorno
-#    @Contract
-#    Scenario: Garantir o contrato do retorno de uma reserva especifica
-#      Given path 'booking/11'
-#      When method get
-#      Then status 418
-#      * def booking = read('classpath:examples/data/bookingPayload.json')
-#      And match response == booking
+  @Contract
+   Scenario: Garantir o contrato do retorno de uma reserva especifica
+      * def booking = read('classpath:examples/data/bookingPayload.json')
+      Given path 'booking/11'
+      When method get
+      Then status 200
+      And match response == booking
+      * print response
 
   @acceptance
   Scenario: Listar IDs das reservas
@@ -30,7 +31,7 @@ Feature: Booking - Get
   Scenario: Listar uma reserva específica
     Given path 'booking/1'
     When method get
-    Then status 418
+    Then status 200
 
   @acceptance
   Scenario Outline: Listar IDs de reservas utilizando o filtro <parametro>

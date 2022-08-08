@@ -1,7 +1,7 @@
 {
   "firstname" : "Will",
   "lastname" : "Smith",
-  "totalprice" : 150,
+  "totalprice" : 111,
   "depositpaid" : true,
   "bookingdates" : {
     "checkin" : "2018-01-01",

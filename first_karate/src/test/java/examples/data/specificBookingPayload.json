@@ -1,11 +1,11 @@
 {
-  "firstname": "#string",
-  "lastname": "#string",
-  "totalprice": "#number",
-  "depositpaid": "#boolean",
+  "firstname": "#(nome)",
+  "lastname": "#(sobreNome)",
+  "totalprice": "#(valorTotal)",
+  "depositpaid": "#(depositoPago)",
   "bookingdates": {
-    "checkin": "#string",
-    "checkout": "#string"
+    "checkin": "#(dataEntrada)",
+    "checkout": "#(dataSaida)"
   },
-  "additionalneeds" : "#string"
+  "additionalneeds" : "#(Sim)"
 }
