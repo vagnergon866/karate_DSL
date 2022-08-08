@@ -19,5 +19,9 @@ class BookingRunner {
         return Karate.run("feature/GetBooking.feature").relativeTo(getClass());
     }
 
+    @Karate.Test
+    Karate putBookingTest() {
+        return Karate.run("feature/PutBooking.feature").relativeTo(getClass());
+    }
 
 }
