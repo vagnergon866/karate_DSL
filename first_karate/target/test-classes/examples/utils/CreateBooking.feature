@@ -12,8 +12,12 @@ Feature: Booking - Post
      And request requestBooking
      When method post
      Then status 200
-     * print requestBooking
+     * print response
 
 
 
-
+#   function(args) {
+#   var RabbitMQ = Java.type('srec.services.support.javautils.utils.RabbitMQ');
+#   var rabbitmqProducer = new RabbitMQ();
+#   return rabbitmqProducer.write(args);
+#   }

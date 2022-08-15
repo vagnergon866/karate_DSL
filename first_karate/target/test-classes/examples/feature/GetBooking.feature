@@ -14,8 +14,8 @@ Feature: Booking - Get
 
   @Contract
    Scenario: Garantir o contrato do retorno de uma reserva especifica
-      * def booking = read('classpath:examples/data/bookingPayload.json')
-      Given path 'booking/11'
+      * def booking = read('classpath:examples/data/buscarBookingPayload.json')
+      Given path 'booking/3'
       When method get
       Then status 200
       And match response == booking

@@ -45,7 +45,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>         
   <div id="nav-date">
-    <div>2022-08-07 09:39:11 PM</div>
+    <div>2022-08-10 04:32:24 PM</div>
   </div>        
 </div>
 
@@ -77,7 +77,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>709</span>
+              <span>ms:</span>&nbsp;<span>718</span>
             </div>
           </div>
           <div class="step-row">
@@ -109,7 +109,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">21:39:11.226 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.4">16:32:24.154 karate.env system property was: null 
 </div>   
 
   
@@ -269,7 +269,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">706</div>
+    <div class="time-cell passed">715</div>
   </div>
 
    
@@ -278,7 +278,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.13">21:39:11.226 request:
+  <div class="preformatted" data-parent="0.13">16:32:24.158 request:
 1 &gt; POST https://treinamento-api.herokuapp.com/booking
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Accept: application/json
@@ -289,17 +289,17 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;firstname&quot;:&quot;Will&quot;,&quot;lastname&quot;:&quot;Smith&quot;,&quot;totalprice&quot;:111,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2018-01-01&quot;,&quot;checkout&quot;:&quot;2019-01-01&quot;},&quot;additionalneeds&quot;:&quot;Breakfast&quot;}
 
-21:39:11.943 response time in milliseconds: 717
+16:32:24.872 response time in milliseconds: 712
 1 &lt; 200
 1 &lt; Server: Cowboy
 1 &lt; Connection: keep-alive
 1 &lt; X-Powered-By: Express
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 196
-1 &lt; Etag: W/&quot;c4-Wdwr1+VKl6C9zNJ0Mxp2c1CHNdE&quot;
-1 &lt; Date: Mon, 08 Aug 2022 00:37:44 GMT
+1 &lt; Etag: W/&quot;c4-VPyzVF60oB1/okwoaUra1oH+CGA&quot;
+1 &lt; Date: Wed, 10 Aug 2022 19:30:54 GMT
 1 &lt; Via: 1.1 vegur
-{&quot;bookingid&quot;:42,&quot;booking&quot;:{&quot;firstname&quot;:&quot;Will&quot;,&quot;lastname&quot;:&quot;Smith&quot;,&quot;totalprice&quot;:111,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2018-01-01&quot;,&quot;checkout&quot;:&quot;2019-01-01&quot;},&quot;additionalneeds&quot;:&quot;Breakfast&quot;}}
+{&quot;bookingid&quot;:37,&quot;booking&quot;:{&quot;firstname&quot;:&quot;Will&quot;,&quot;lastname&quot;:&quot;Smith&quot;,&quot;totalprice&quot;:111,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2018-01-01&quot;,&quot;checkout&quot;:&quot;2019-01-01&quot;},&quot;additionalneeds&quot;:&quot;Breakfast&quot;}}
 
 </div>   
 
@@ -345,7 +345,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">15</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print requestBooking</span>
+        <span>*</span>&nbsp;<span>print response</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -357,16 +357,19 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.15">21:39:11.943 [print] {
-  &quot;firstname&quot;: &quot;Will&quot;,
-  &quot;lastname&quot;: &quot;Smith&quot;,
-  &quot;totalprice&quot;: 111,
-  &quot;depositpaid&quot;: true,
-  &quot;bookingdates&quot;: {
-    &quot;checkin&quot;: &quot;2018-01-01&quot;,
-    &quot;checkout&quot;: &quot;2019-01-01&quot;
-  },
-  &quot;additionalneeds&quot;: &quot;Breakfast&quot;
+  <div class="preformatted" data-parent="0.15">16:32:24.873 [print] {
+  &quot;bookingid&quot;: 37,
+  &quot;booking&quot;: {
+    &quot;firstname&quot;: &quot;Will&quot;,
+    &quot;lastname&quot;: &quot;Smith&quot;,
+    &quot;totalprice&quot;: 111,
+    &quot;depositpaid&quot;: true,
+    &quot;bookingdates&quot;: {
+      &quot;checkin&quot;: &quot;2018-01-01&quot;,
+      &quot;checkout&quot;: &quot;2019-01-01&quot;
+    },
+    &quot;additionalneeds&quot;: &quot;Breakfast&quot;
+  }
 }
  
 </div>   
