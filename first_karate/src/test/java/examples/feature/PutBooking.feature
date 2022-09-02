@@ -1,6 +1,7 @@
 Feature: Booking - Put
 
   Background:
+    * call read('classpath:examples/common/common.feature')
     * url "https://treinamento-api.herokuapp.com"
     * header Content-Type = 'application/json'
     * header Accept = 'application/json'
@@ -9,17 +10,11 @@ Feature: Booking - Put
     * def bookingId = booking.response.bookingid
     * def bookingRequest  = read('classpath:examples/data/bookingPayload.json')
 
-    @acceptance
+
     Scenario:  Alterar uma reserva usando o token
-      * def numberRandom =
-    """
-    function(){
-      var RandomCreate = Java.type('examples.utils.RandomCreate');
-      var number = new RandomCreate();
-      return number.createNumberRandom();
-    }
-    """
-      * set bookingRequest.firstname = call numberRandom
+      * def retornaValor = new RetornaValor();
+      * def alteraFirstname = retornaValor.valorNome();
+      * set bookingRequest.firstname = alteraFirstname
       Given path 'booking/'+bookingId
       And header Cookie = "token="+tokenAuth
       And request bookingRequest
@@ -27,7 +22,7 @@ Feature: Booking - Put
       Then status 200
       * print response
 
-   @acceptance
+
    Scenario Outline: Alterar uma reserva, outra forama de manipular dados <cenario>
      * set bookingRequest.firstname = <valorParametro>
      * set bookingRequest.lastname = <valorParametro2>
@@ -42,7 +37,7 @@ Feature: Booking - Put
      | cenario              | valorParametro  | valorParametro2 |
      | para alterar o nome  |    'Teste'      |    'Testando'   |
 
-   @acceptance
+
    Scenario: Tentar alterar uma reserva quando o token não for enviado
      * set bookingRequest.totalprice = 525
      Given path 'booking/'+bookingId
@@ -50,7 +45,7 @@ Feature: Booking - Put
      When method put
      Then status 403
 
-  @acceptance
+
   Scenario: Alterar uma reserva usando o Basic auth
     * set bookingRequest.totalprice = 564
     Given path 'booking/'+bookingId
@@ -60,7 +55,7 @@ Feature: Booking - Put
     Then status 200
 
 
-  @e2e
+
   Scenario: Tentar alterar uma reserva quando o token não for enviado
     * set bookingRequest.firstname = 'Tom'
     Given path 'booking/' +bookingId
@@ -68,7 +63,7 @@ Feature: Booking - Put
     When method put
     Then status 403
 
-  @e2e
+
   Scenario: Tentar alterar uma reserva quando o token enviado for inválido
     * set bookingRequest.firstname = 'Holland'
     Given path 'booking/' +bookingId
@@ -77,7 +72,7 @@ Feature: Booking - Put
     When method put
     Then status 403
 
-  @e2e
+
   Scenario: Tentar alterar uma reserva que não existe
     * set bookingRequest.firstname = 'Andrew'
     Given path 'booking/' +0

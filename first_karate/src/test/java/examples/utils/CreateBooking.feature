@@ -5,7 +5,6 @@ Feature: Booking - Post
     * header Content-Type = 'application/json'
     * header Accept = 'application/json'
 
-   @acceptance
    Scenario: Criar uma nova reserva
      * def requestBooking = read('classpath:examples/data/bookingPayload.json')
      Given path 'booking'

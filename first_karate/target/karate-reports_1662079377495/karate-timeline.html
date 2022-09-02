@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/examples\/feature\/PutBooking[1:13]","start":1662079096713,"end":1662079099330,"title":"src\/test\/java\/examples\/feature\/PutBooking[1:13] 21:38:16.713-21:38:19.330 Alterar uma reserva usando o token","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/examples\/feature\/PutBooking[2.1:43]","start":1662079099338,"end":1662079101344,"title":"src\/test\/java\/examples\/feature\/PutBooking[2.1:43] 21:38:19.338-21:38:21.344 Alterar uma reserva, outra forama de manipular dados para alterar o nome"},{"id":3,"group":1,"content":"src\/test\/java\/examples\/feature\/PutBooking[3:46]","start":1662079101353,"end":1662079103380,"title":"src\/test\/java\/examples\/feature\/PutBooking[3:46] 21:38:21.353-21:38:23.380 Tentar alterar uma reserva quando o token não for enviado"},{"id":4,"group":1,"content":"src\/test\/java\/examples\/feature\/PutBooking[4:54]","start":1662079103385,"end":1662079105380,"title":"src\/test\/java\/examples\/feature\/PutBooking[4:54] 21:38:23.385-21:38:25.380 Alterar uma reserva usando o Basic auth"},{"id":5,"group":1,"content":"src\/test\/java\/examples\/feature\/PutBooking[5:64]","start":1662079105383,"end":1662079107380,"title":"src\/test\/java\/examples\/feature\/PutBooking[5:64] 21:38:25.383-21:38:27.380 Tentar alterar uma reserva quando o token não for enviado"},{"id":6,"group":1,"content":"src\/test\/java\/examples\/feature\/PutBooking[6:72]","start":1662079107383,"end":1662079109378,"title":"src\/test\/java\/examples\/feature\/PutBooking[6:72] 21:38:27.383-21:38:29.378 Tentar alterar uma reserva quando o token enviado for inválido"},{"id":7,"group":1,"content":"src\/test\/java\/examples\/feature\/PutBooking[7:81]","start":1662079109381,"end":1662079111376,"title":"src\/test\/java\/examples\/feature\/PutBooking[7:81] 21:38:29.381-21:38:31.376 Tentar alterar uma reserva que não existe"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
