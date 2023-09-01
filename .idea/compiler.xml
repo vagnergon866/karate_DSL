@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="first_karate" target="1.8" />
+      <module name="first_karate" target="10" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
